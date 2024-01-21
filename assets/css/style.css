@@ -450,7 +450,7 @@ main {
 .cv-logo {
   color: white;
   font-size: 20px; /* Adjust the size as needed */
-  font-weight: 1000; /* Optional: makes the letters bolder */
+  font-weight: bold; /* Optional: makes the letters bolder */
   /* Additional styling as needed */
 }
 
