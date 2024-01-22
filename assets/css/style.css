@@ -448,9 +448,9 @@ main {
 
 
 .cv-logo {
-  color: white;
+  color: var(--light-gray-70);
   font-size: 20px; /* Adjust the size as needed */
-  font-weight: bold; /* Optional: makes the letters bolder */
+  font-weight: 600; /* Optional: makes the letters bolder */
   /* Additional styling as needed */
 }
 
