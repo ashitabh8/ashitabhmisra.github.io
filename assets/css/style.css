@@ -451,6 +451,8 @@ main {
   color: var(--light-gray-70);
   font-size: 20px; /* Adjust the size as needed */
   font-weight: 600; /* Optional: makes the letters bolder */
+ 
+ .cv-logo:hover { color: var(--light-gray); }
   /* Additional styling as needed */
 }
 
