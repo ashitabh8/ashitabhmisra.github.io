@@ -451,10 +451,11 @@ main {
   color: var(--light-gray-70);
   font-size: 18px; /* Adjust the size as needed */
   font-weight: 600; /* Optional: makes the letters bolder */
- 
- .social-item .cv-logo:hover { color: var(--light-gray); }
-  /* Additional styling as needed */
+
 }
+
+.social-item .cv-logo:hover { color: var(--light-gray); }
+  /* Additional styling as needed */
 
 
 
