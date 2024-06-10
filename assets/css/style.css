@@ -516,11 +516,10 @@ main {
 .about-text p { margin-bottom: 15px; }
 
 .text-gradient-yellow {
-            background: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
+    background: var(--text-gradient-yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 /**
  * #service 
  */
