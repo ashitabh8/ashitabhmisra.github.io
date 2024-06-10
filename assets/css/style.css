@@ -521,6 +521,9 @@ main {
     -webkit-text-fill-color: transparent;
     display: inline; /* Ensure inline display to keep text on the same line */
 }
+.spacing-bottom {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
 /**
  * #service 
  */
