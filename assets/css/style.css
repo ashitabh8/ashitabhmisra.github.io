@@ -524,6 +524,25 @@ main {
 .spacing-bottom {
     margin-bottom: 20px; /* Adjust the value as needed */
 }
+
+.yellow-bullets {
+    list-style-type: disc; /* Use disc bullets */
+}
+
+.yellow-bullets li {
+    position: relative;
+    padding-left: 20px; /* Adjust spacing as needed */
+}
+
+.yellow-bullets li::before {
+    content: '•'; /* Use a bullet character */
+    position: absolute;
+    left: 0;
+    color: yellow; /* Set bullet color to yellow */
+    font-size: 1.2em; /* Adjust size as needed */
+    line-height: 1.2em; /* Align bullet with text */
+}
+
 /**
  * #service 
  */
