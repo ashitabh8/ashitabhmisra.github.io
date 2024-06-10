@@ -519,6 +519,7 @@ main {
     background: var(--text-gradient-yellow);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline; /* Ensure inline display to keep text on the same line */
 }
 /**
  * #service 
