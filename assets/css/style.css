@@ -521,10 +521,9 @@ main {
     -webkit-text-fill-color: transparent;
     display: inline; /* Ensure inline display to keep text on the same line */
 }
-.spacing-bottom {
+.about-text p.spacing-bottom {
     margin-bottom: 50px; /* Adjust the value as needed */
 }
-
 .yellow-bullets {
     list-style-type: disc; /* Use disc bullets */
 }
