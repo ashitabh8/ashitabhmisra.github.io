@@ -1,5 +1,29 @@
 'use strict';
 
+document.addEventListener('DOMContentLoaded', function () {
+  const navigationLinks = document.querySelectorAll("[data-nav-link]");
+  const pages = document.querySelectorAll("[data-page]");
+
+  navigationLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      const targetPage = this.getAttribute("data-nav-link");
+
+      pages.forEach(page => {
+        if (page.getAttribute("data-page") === targetPage) {
+          page.classList.add("active");
+        } else {
+          page.classList.remove("active");
+        }
+      });
+
+      navigationLinks.forEach(link => link.classList.remove("active"));
+      this.classList.add("active");
+
+      window.scrollTo(0, 0);
+    });
+  });
+});
+
 // Element toggle function
 const elementToggleFunc = function (elem) { 
   elem.classList.toggle("active"); 
