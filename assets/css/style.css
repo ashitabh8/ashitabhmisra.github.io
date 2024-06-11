@@ -458,7 +458,13 @@ main {
   /* Additional styling as needed */
 
 
-
+.social-icon {
+  width: 18px; /* Adjust the size as needed */
+  height: 18px; /* Adjust the size as needed */
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: cover; /* Ensures the image maintains aspect ratio */
+}
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
