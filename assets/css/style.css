@@ -564,7 +564,7 @@ main {
 }
 
 .yellow-bullets-hypen .status {
-    color: var(--text-gradient-yellow);/* Set status text color to yellow */
+    color: var(--light-gray);/* Set status text color to yellow */
 }
 /**
  * #service 
