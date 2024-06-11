@@ -440,31 +440,33 @@ main {
 
 .social-item .social-link {
   color: var(--light-gray-70);
-  font-size: 18px;
+  font-size: 24px;
 }
 
 
-.social-item .social-link:hover { color: var(--text-gradient-yellow); }
+.social-item .social-link:hover { color: var(--light-gray); }
 
 
 .social-item .cv-logo {
   color: var(--light-gray-70);
-  font-size: 18px; /* Adjust the size as needed */
+  font-size: 24px; /* Adjust the size as needed */
   font-weight: 600; /* Optional: makes the letters bolder */
 
 }
 
-.social-item .cv-logo:hover { color: var(--text-gradient-yellow); }
+.social-item .cv-logo:hover { color: var(--light-gray); }
   /* Additional styling as needed */
 
 
 .social-item .social-icon {
-  width: 18px; /* Adjust the size as needed */
-  height: 18px; /* Adjust the size as needed */
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
   display: inline-block;
   vertical-align: middle;
   object-fit: cover; /* Ensures the image maintains aspect ratio */
 }
+
+.social-item .social-icon:hover { color: var(--light-gray); }
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
