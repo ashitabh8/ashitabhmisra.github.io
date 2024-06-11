@@ -458,7 +458,7 @@ main {
   /* Additional styling as needed */
 
 
-social-item .social-icon {
+.social-item .social-icon {
   width: 18px; /* Adjust the size as needed */
   height: 18px; /* Adjust the size as needed */
   display: inline-block;
