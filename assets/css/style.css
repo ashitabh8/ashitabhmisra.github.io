@@ -558,13 +558,13 @@ main {
     content: '-'; /* Use a hyphen character */
     position: absolute;
     left: 0;
-    color: yellow; /* Set bullet color to yellow */
+    color: var(--text-gradient-yellow); /* Set bullet color to yellow */
     font-size: 1.2em; /* Adjust size as needed */
     line-height: 1.2em; /* Align bullet with text */
 }
 
 .yellow-bullets-hypen .status {
-    color: yellow; /* Set status text color to yellow */
+    color: var(--text-gradient-yellow);/* Set status text color to yellow */
 }
 /**
  * #service 
