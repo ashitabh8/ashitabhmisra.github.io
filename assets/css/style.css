@@ -538,7 +538,7 @@ main {
     content: '•'; /* Use a bullet character */
     position: absolute;
     left: 0;
-    color: yellow; /* Set bullet color to yellow */
+    color: var(--text-gradient-yellow); /* Set bullet color to yellow */
     font-size: 1.2em; /* Adjust size as needed */
     line-height: 1.2em; /* Align bullet with text */
 }
