@@ -543,6 +543,29 @@ main {
     line-height: 1.2em; /* Align bullet with text */
 }
 
+.yellow-bullets-hypen {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 20px; /* Adjust padding as needed */
+}
+
+.yellow-bullets-hypen li {
+    position: relative;
+    margin-bottom: 10px; /* Space between list items */
+    padding-left: 20px; /* Adjust padding as needed */
+}
+
+.yellow-bullets-hypen li::before {
+    content: '-'; /* Use a hyphen character */
+    position: absolute;
+    left: 0;
+    color: yellow; /* Set bullet color to yellow */
+    font-size: 1.2em; /* Adjust size as needed */
+    line-height: 1.2em; /* Align bullet with text */
+}
+
+.yellow-bullets-hypen .status {
+    color: yellow; /* Set status text color to yellow */
+}
 /**
  * #service 
  */
