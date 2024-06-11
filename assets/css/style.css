@@ -552,6 +552,7 @@ main {
     position: relative;
     margin-bottom: 10px; /* Space between list items */
     padding-left: 20px; /* Adjust padding as needed */
+    color: var(--light-gray);
 }
 
 .yellow-bullets-hypen li::before {
@@ -564,7 +565,7 @@ main {
 }
 
 .yellow-bullets-hypen .status {
-    color: var(--light-gray);/* Set status text color to yellow */
+    color: var(--text-gradient-yellow); /* Set status text color to yellow */
 }
 /**
  * #service 
