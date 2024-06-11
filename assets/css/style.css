@@ -523,6 +523,10 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+.about-text b {  color: var(--text-gradient-yellow);
+ }
+
+
 .text-gradient-yellow {
     background: var(--text-gradient-yellow);
     -webkit-background-clip: text;
