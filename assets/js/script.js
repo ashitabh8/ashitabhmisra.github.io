@@ -208,4 +208,13 @@ function updateVisitorCount() {
 document.addEventListener('DOMContentLoaded', updateVisitorCount);
 
 }
-
+function isLocalStorageSupported() {
+  try {
+    const test = '__localStorageTest__';
+    localStorage.setItem(test, test);
+    localStorage.removeItem(test);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
