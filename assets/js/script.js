@@ -24,6 +24,46 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+function isLocalStorageSupported() {
+  try {
+    const test = '__localStorageTest__';
+    localStorage.setItem(test, test);
+    localStorage.removeItem(test);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+// Function to update visitor count
+function updateVisitorCount() {
+
+  // Verify local storage support
+  if (!isLocalStorageSupported()) {
+    console.warn('Local storage is not supported by this browser.');
+    return;
+  } else {
+    console.log('Local storage is supported by this browser.');
+  }
+  // Get the visitor count from local storage
+  let visitorCount = localStorage.getItem('visitorCount');
+
+  // If there is no visitor count, initialize it to 0
+  if (!visitorCount) {
+    visitorCount = 0;
+  }
+
+  // Increment the visitor count
+  visitorCount++;
+
+  // Store the updated visitor count in local storage
+  localStorage.setItem('visitorCount', visitorCount);
+
+  // Display the visitor count on the page
+  const visitorCountElement = document.getElementById('visitor-count');
+  visitorCountElement.textContent = `You are the ${visitorCount}th visitor! Thank you for checking my website!`;
+}
+
 // Element toggle function
 const elementToggleFunc = function (elem) { 
   elem.classList.toggle("active"); 
@@ -182,47 +222,8 @@ if (navigationLinks.length > 0 && pages.length > 0) {
   }
 } else {
   console.log("Navigation links or pages not found");
-
-// Function to update visitor count
-function updateVisitorCount() {
-
-  // Verify local storage support
-  if (!isLocalStorageSupported()) {
-    console.warn('Local storage is not supported by this browser.');
-    return;
-  } else {
-    console.log('Local storage is supported by this browser.');
-  }
-  // Get the visitor count from local storage
-  let visitorCount = localStorage.getItem('visitorCount');
-
-  // If there is no visitor count, initialize it to 0
-  if (!visitorCount) {
-    visitorCount = 0;
-  }
-
-  // Increment the visitor count
-  visitorCount++;
-
-  // Store the updated visitor count in local storage
-  localStorage.setItem('visitorCount', visitorCount);
-
-  // Display the visitor count on the page
-  const visitorCountElement = document.getElementById('visitor-count');
-  visitorCountElement.textContent = `You are the ${visitorCount}th visitor! Thank you for checking my website!`;
 }
 
 // Call the function to update the visitor count when the page loads
 document.addEventListener('DOMContentLoaded', updateVisitorCount);
 
-}
-function isLocalStorageSupported() {
-  try {
-    const test = '__localStorageTest__';
-    localStorage.setItem(test, test);
-    localStorage.removeItem(test);
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
