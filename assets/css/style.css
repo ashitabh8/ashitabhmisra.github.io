@@ -1893,7 +1893,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin: 0;
   }
 
-  .visitor-count {
+  footer p.visitor-count {
     text-align: center;
     font-size: 1.2em;
     margin-top: 20px;
