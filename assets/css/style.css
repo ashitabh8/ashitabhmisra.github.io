@@ -1955,4 +1955,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+.visitor-count {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: var(--text-gradient-yellow); /* Adjust this to match your site's theme */
+}
 }

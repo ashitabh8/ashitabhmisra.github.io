@@ -182,5 +182,30 @@ if (navigationLinks.length > 0 && pages.length > 0) {
   }
 } else {
   console.log("Navigation links or pages not found");
+
+// Function to update visitor count
+function updateVisitorCount() {
+  // Get the visitor count from local storage
+  let visitorCount = localStorage.getItem('visitorCount');
+
+  // If there is no visitor count, initialize it to 0
+  if (!visitorCount) {
+    visitorCount = 0;
+  }
+
+  // Increment the visitor count
+  visitorCount++;
+
+  // Store the updated visitor count in local storage
+  localStorage.setItem('visitorCount', visitorCount);
+
+  // Display the visitor count on the page
+  const visitorCountElement = document.getElementById('visitor-count');
+  visitorCountElement.textContent = `You are the ${visitorCount}th visitor! Thank you for checking my website!`;
+}
+
+// Call the function to update the visitor count when the page loads
+document.addEventListener('DOMContentLoaded', updateVisitorCount);
+
 }
 
