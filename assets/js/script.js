@@ -185,6 +185,14 @@ if (navigationLinks.length > 0 && pages.length > 0) {
 
 // Function to update visitor count
 function updateVisitorCount() {
+
+  // Verify local storage support
+  if (!isLocalStorageSupported()) {
+    console.warn('Local storage is not supported by this browser.');
+    return;
+  } else {
+    console.log('Local storage is supported by this browser.');
+  }
   // Get the visitor count from local storage
   let visitorCount = localStorage.getItem('visitorCount');
 
