@@ -24,20 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-function isLocalStorageSupported() {
-  try {
-    const test = '__localStorageTest__';
-    localStorage.setItem(test, test);
-    localStorage.removeItem(test);
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
 // Function to update visitor count
 function updateVisitorCount() {
-
   // Verify local storage support
   if (!isLocalStorageSupported()) {
     console.warn('Local storage is not supported by this browser.');
@@ -45,6 +33,7 @@ function updateVisitorCount() {
   } else {
     console.log('Local storage is supported by this browser.');
   }
+
   // Get the visitor count from local storage
   let visitorCount = localStorage.getItem('visitorCount');
 
@@ -59,9 +48,40 @@ function updateVisitorCount() {
   // Store the updated visitor count in local storage
   localStorage.setItem('visitorCount', visitorCount);
 
+  // Get the appropriate ordinal suffix
+  const ordinalSuffix = getOrdinalSuffix(visitorCount);
+
   // Display the visitor count on the page
   const visitorCountElement = document.getElementById('visitor-count');
-  visitorCountElement.textContent = `You are the ${visitorCount}th visitor! Thank you for checking my website!`;
+  visitorCountElement.textContent = `You are the ${visitorCount}${ordinalSuffix} visitor! Thank you for checking my website!`;
+}
+
+// Function to check if local storage is supported
+function isLocalStorageSupported() {
+  try {
+    const test = '__localStorageTest__';
+    localStorage.setItem(test, test);
+    localStorage.removeItem(test);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+// Function to get the ordinal suffix for a number
+function getOrdinalSuffix(number) {
+  const j = number % 10,
+        k = number % 100;
+  if (j === 1 && k !== 11) {
+    return "st";
+  }
+  if (j === 2 && k !== 12) {
+    return "nd";
+  }
+  if (j === 3 && k !== 13) {
+    return "rd";
+  }
+  return "th";
 }
 
 // Element toggle function
